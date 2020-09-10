@@ -4,7 +4,7 @@ import {
   prepareCoinData,
   findNameWithSymbol,
   createErrorList
-} from "./utils.js";
+} from "./js/utils.js";
 
 window.addEventListener("DOMContentLoaded", async (event) => {
   const coinData = await prepareCoinData();
