@@ -1,0 +1,11 @@
+.error-container {
+  color: #d8000c;
+  background-color: #ffbaba;
+  width: 90%;
+}
+.error-output {
+  list-style: none;
+}
+.error-output > li {
+  margin: 5px;
+}

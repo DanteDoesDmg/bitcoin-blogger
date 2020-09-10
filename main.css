@@ -1,9 +1,10 @@
 @import "./styles/reset.css";
 @import "./styles/text-input.css";
+@import "./styles/error.css";
 
 .app-container {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   align-items: center;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
 }
