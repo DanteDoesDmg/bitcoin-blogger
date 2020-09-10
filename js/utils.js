@@ -40,7 +40,7 @@ export function separateFunctionString(funcString) {
 
   try {
     const result = funcString.split("/").map((el) => el.replace(/ /g, ""));
-    if ([0,1].includes(result.length)) {
+    if ([0, 1].includes(result.length)) {
       return false;
     }
     return result;
@@ -100,5 +100,19 @@ export function createErrorList(errorArray, errorOutput) {
     tmpListElement.textContent = errorMessage;
     errorOutput.appendChild(tmpListElement);
   });
-
+}
+export function createPreview(text, textOutput) {
+  /** Function creates paragraphs based on provided string, and places them inside a provided
+   * html container element.
+   * @function createPreview
+   * @param {string} - Text meant to be shown
+   * @param {Element} - HTML container element where all the paragraphs will be injected
+   *
+   */
+  textOutput.innerHTML = null;
+  for (const paragraph of text.split("\n")) {
+    const htmlParagraph = document.createElement("p");
+    htmlParagraph.innerHTML = paragraph;
+    textOutput.appendChild(htmlParagraph);
+  }
 }

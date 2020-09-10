@@ -27,3 +27,7 @@
   background: none repeat scroll 0 0 #ffffff;
   outline-width: 0;
 }
+
+.text-output {
+  overflow: auto;
+}

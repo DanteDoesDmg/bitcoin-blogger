@@ -3,7 +3,8 @@ import {
   separateFunctionString,
   prepareCoinData,
   findNameWithSymbol,
-  createErrorList
+  createErrorList,
+  createPreview,
 } from "/js/utils.js";
 
 window.addEventListener("DOMContentLoaded", async (event) => {
@@ -33,10 +34,9 @@ window.addEventListener("DOMContentLoaded", async (event) => {
         }
       }
     );
-    
-    createErrorList(errorData, errorOutput)
 
-    textOutput.innerHTML = result;
+    createErrorList(errorData, errorOutput);
+    createPreview(result, textOutput);
   }, 1500);
 
   textInput.addEventListener("input", debouncedTextTransform);
