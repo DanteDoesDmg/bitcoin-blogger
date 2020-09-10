@@ -37,12 +37,16 @@ export function separateFunctionString(funcString) {
    * @return {Array} - An array holding the function Name and arguments. Function name
    * is always under index - 0
    */
-  const result = funcString.split("/").map((el) => el.replace(/ /g, ""));
 
-  if (result.length === 0) {
+  try {
+    const result = funcString.split("/").map((el) => el.replace(/ /g, ""));
+    if ([0,1].includes(result.length)) {
+      return false;
+    }
+    return result;
+  } catch (error) {
     return false;
   }
-  return result;
 }
 export async function prepareCoinData() {
   /**
@@ -96,4 +100,5 @@ export function createErrorList(errorArray, errorOutput) {
     tmpListElement.textContent = errorMessage;
     errorOutput.appendChild(tmpListElement);
   });
+
 }
