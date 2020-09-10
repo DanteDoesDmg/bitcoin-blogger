@@ -1,0 +1,9 @@
+@import "./styles/reset.css";
+@import "./styles/text-input.css";
+
+.app-container {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  flex-wrap:wrap;
+}
